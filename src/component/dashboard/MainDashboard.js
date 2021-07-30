@@ -26,7 +26,7 @@ import ChartStackedBar from "../chart/ChartStackedBar";
 // import { urlData } from "../../data/urlDataForest";
 
 const MainDashboard = () => {
-  const [query, setQuery] = useState({ keyword: "Riau" });
+  const [query, setQuery] = useState({ keyword: "Aceh" });
 
   const updateDashboard = (e, result) => {
     // const { name, value } = result || e.target;
@@ -63,7 +63,7 @@ const MainDashboard = () => {
             <HeaderCardFilter>
               <HeaderText>Choose the region you want to explore</HeaderText>
               <Dropdown
-                placeholder="Select Region"
+                placeholder="Aceh"
                 fluid
                 name="keyword"
                 search

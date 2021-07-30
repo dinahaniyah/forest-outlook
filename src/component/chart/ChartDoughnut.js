@@ -3,7 +3,7 @@ import axios from "axios";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 import Charts from "fusioncharts/fusioncharts.charts";
-import FusionTheme from "fusioncharts/themes/fusioncharts.theme.candy";
+import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import { ChartCardDetail } from "../../styled/dashboard/MainDashboard";
 const ChartDoughnut = ({ query }) => {
   ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
@@ -47,7 +47,7 @@ const ChartDoughnut = ({ query }) => {
         centerLabelBold: "1",
         showTooltip: "0",
         decimals: "0",
-        theme: "candy",
+        theme: "fusion",
       },
       //   categories: [
       //     {
@@ -67,7 +67,7 @@ const ChartDoughnut = ({ query }) => {
   useEffect(async () => {
     const fetchData = async () => {
       const result = await axios(
-        `https://forest.wri-indonesia.tech/api/provincial_degraded_forest_loss?and=(tcd.eq.83,year.gt.2000,provinsi.eq.${Object.values(
+        `https://forest.wri-indonesia.tech/api/provincial_degraded_forest_loss?and=(tcd.eq.46,year.gt.2000,provinsi.eq.${Object.values(
           query
         )})&order=year`
       );
